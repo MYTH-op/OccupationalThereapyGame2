@@ -8,6 +8,10 @@ public class Demolition : MonoBehaviour
    
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(collision.gameObject);
+        if(gameObject.tag=="Tumbler")
+        {
+            Destroy(collision.gameObject);
+        }
+        
     }
 }

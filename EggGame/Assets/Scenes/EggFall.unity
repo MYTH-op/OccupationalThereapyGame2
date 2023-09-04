@@ -221,7 +221,7 @@ GameObject:
   - component: {fileID: 400497896}
   m_Layer: 0
   m_Name: 9-Sliced
-  m_TagString: Untagged
+  m_TagString: Tumbler
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -234,8 +234,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 400497892}
   m_LocalRotation: {x: 0, y: 0, z: 0.86602545, w: 0.49999994}
-  m_LocalPosition: {x: 0.423, y: 0.6, z: 0.067680456}
-  m_LocalScale: {x: -0.025, y: 1.23, z: 1}
+  m_LocalPosition: {x: 0.423, y: 0.5, z: 0.067680456}
+  m_LocalScale: {x: -0.025, y: 13.29999, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 980725693}
@@ -694,7 +694,7 @@ GameObject:
   - component: {fileID: 1285836091}
   m_Layer: 0
   m_Name: 9-Sliced (1)
-  m_TagString: Untagged
+  m_TagString: Tumbler
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -707,8 +707,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1285836087}
   m_LocalRotation: {x: 0, y: 0, z: 0.5, w: 0.8660254}
-  m_LocalPosition: {x: -1.383, y: 0.6, z: 0.067680456}
-  m_LocalScale: {x: -0.025, y: 1.44, z: 1}
+  m_LocalPosition: {x: -1.383, y: 0.5, z: 0.067680456}
+  m_LocalScale: {x: -0.025, y: 7.863264, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 980725693}
