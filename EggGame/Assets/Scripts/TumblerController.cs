@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EggController : MonoBehaviour
+public class TumblerController : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Vector2 initialPosition; 
@@ -9,7 +9,6 @@ public class EggController : MonoBehaviour
     private bool isFallingLeft = false;
     public float fallSpeed = 1.0f;
     public float destroyAngle = 30.0f;
-    [SerializeField] float currentAngle = transform.rotation.eulerAngles.x;
     
     void Start()
     {
@@ -47,16 +46,5 @@ public class EggController : MonoBehaviour
         transform.position = initialPosition; 
         FallingRandomDirection();
     }
-
-
-    void destroy()
-    {
-        
-        if (currentAngle > destroyAngle)
-        {
-            Destroy(gameObject);
-        }
-    }
     
-   
 }
