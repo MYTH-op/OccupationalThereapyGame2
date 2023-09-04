@@ -7,7 +7,10 @@ public class EggController : MonoBehaviour
     private bool isFalling = false;
     private bool isFallingRight = false;
     private bool isFallingLeft = false;
-    public float fallSpeed = 1.0f; 
+    public float fallSpeed = 1.0f;
+    public float destroyAngle = 30.0f;
+    [SerializeField] float currentAngle = transform.rotation.eulerAngles.x;
+    
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -44,4 +47,16 @@ public class EggController : MonoBehaviour
         transform.position = initialPosition; 
         FallingRandomDirection();
     }
+
+
+    void destroy()
+    {
+        
+        if (currentAngle > destroyAngle)
+        {
+            Destroy(gameObject);
+        }
+    }
+    
+   
 }
