@@ -364,8 +364,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallSpeed: 0.5
-  gravityScale: 0.3
-  delayBeforeFalling: 3
+  gravityScale: 0.4
+  delayBeforeFalling: 2
 --- !u!50 &898505589
 Rigidbody2D:
   serializedVersion: 4
