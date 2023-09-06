@@ -3,25 +3,38 @@ using System.Collections.Generic;
 
 public class TumblerController : MonoBehaviour
 {
-    public float fallSpeed = 1.0f; 
-    public float gravityScale = 1.0f; 
-    public float delayBeforeFalling = 1.0f; 
+    public float fallSpeed = 1.0f;
+    public float gravityScale = 1.0f;
+    public float delayBeforeFalling = 1.0f;
     private Rigidbody2D rb;
     private Vector2 initialPosition;
-    private List<Vector2> fallPath = new List<Vector2>();
+    private List<TransformData> fallPath = new List<TransformData>();
     private bool isFalling = false;
     private bool isFallingRight = false;
     private bool isFallingLeft = false;
     private int replayIndex = 0;
     private bool isReplayingPath = false;
-    private bool isDelayActive = false; 
+    private bool isDelayActive = false;
+    private Vector2 initialMovementDirection;
+
+    // Create a class to store position and rotation data
+    [System.Serializable]
+    public class TransformData
+    {
+        public Vector3 position;
+        public Quaternion rotation;
+    }
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.gravityScale = gravityScale; 
         initialPosition = transform.position;
+
+        // Get the GameManager instance and set gravityScale and delayBeforeFalling
+    
         FallingRandomDirection();
     }
+
     void Update()
     {
         if (isFalling)
@@ -39,51 +52,76 @@ public class TumblerController : MonoBehaviour
             {
                 if (replayIndex >= 0)
                 {
-                    transform.position = fallPath[replayIndex];
+                    // Retrace position and rotation
+                    TransformData data = fallPath[replayIndex];
+                    transform.position = data.position;
+                    transform.rotation = data.rotation;
                     replayIndex--;
                 }
                 else
                 {
-                    isReplayingPath = false; 
-                    StartCoroutine(ResetAfterDelay(delayBeforeFalling)); 
+                    isReplayingPath = false;
+                    StartCoroutine(ResetAfterDelay(delayBeforeFalling));
                 }
             }
-            else if (!isDelayActive) 
+            else if (!isDelayActive)
             {
-                
-                fallPath.Add(transform.position);
+                // Record position and rotation data
+                fallPath.Add(new TransformData
+                {
+                    position = transform.position,
+                    rotation = transform.rotation
+                });
             }
         }
     }
+
     void FallingRandomDirection()
     {
-        float randomXForce = (Random.value < 0.5f) ? -1f : 1f; 
+        float randomXForce = (Random.value < 0.5f) ? -1f : 1f;
         rb.velocity = new Vector2(randomXForce, 0) * fallSpeed;
         isFallingRight = randomXForce > 0;
         isFallingLeft = randomXForce < 0;
         isFalling = true;
+
+        // Store the initial movement direction
+        initialMovementDirection = rb.velocity.normalized;
     }
+
     void StartReplayingPath()
     {
         isReplayingPath = true;
-        replayIndex = fallPath.Count - 2; 
+        replayIndex = fallPath.Count - 2;
     }
+
     System.Collections.IEnumerator ResetAfterDelay(float delay)
     {
-        isDelayActive = true; 
-        rb.simulated = false; 
+        isDelayActive = true;
+        rb.simulated = false;
         yield return new WaitForSeconds(delay);
-        rb.simulated = true; 
-        isDelayActive = false; 
+        rb.simulated = true;
+        isDelayActive = false;
         ResetToInitialPosition();
     }
+
     void ResetToInitialPosition()
     {
         rb.velocity = Vector2.zero;
         rb.angularVelocity = 0f;
+
+        // Reset the position to the initial position
         transform.position = initialPosition;
-        fallPath.Clear(); 
+
+        // Reset the rotation to zero
+        transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+
+        // Clear the fall path
+        fallPath.Clear();
+
+        // Reapply the initial movement direction in reverse
         FallingRandomDirection();
-        isFalling = true; 
+
+        isFalling = true;
     }
+
 }
