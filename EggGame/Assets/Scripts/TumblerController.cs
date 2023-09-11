@@ -4,8 +4,8 @@ using System.Collections.Generic;
 public class TumblerController : MonoBehaviour
 {
     public float fallSpeed = 1.0f;
-    public float gravityScale = 1.0f;
-    public float delayBeforeFalling = 1.0f;
+    public float gravityScale = 1.0f; // You can modify this in the Unity Inspector
+    public float delayBeforeFalling = 1.0f; // You can modify this in the Unity Inspector
     private Rigidbody2D rb;
     private Vector2 initialPosition;
     private List<TransformData> fallPath = new List<TransformData>();
@@ -29,9 +29,7 @@ public class TumblerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         initialPosition = transform.position;
-
-        // Get the GameManager instance and set gravityScale and delayBeforeFalling
-    
+        rb.gravityScale = gravityScale;
         FallingRandomDirection();
     }
 
@@ -123,5 +121,4 @@ public class TumblerController : MonoBehaviour
 
         isFalling = true;
     }
-
 }
