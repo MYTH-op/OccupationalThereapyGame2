@@ -35,36 +35,43 @@ public class PauseMenu : MonoBehaviour
     public void MainMenu()
     {
         SceneManager.LoadScene("LevelChoosing");
+        
     }
 
     public void Restart_1()
     {
         RestartScene("Level1");
+        Continue();
     }
 
     public void Restart_2()
     {
         RestartScene("Level2");
+        Continue();
     }
 
     public void Restart_3()
     {
         RestartScene("Level3");
+        Continue();
     }
 
     public void Restart_4()
     {
         RestartScene("Level4");
+        Continue();
     }
 
     public void Restart_5()
     {
         RestartScene("Level5");
+        Continue();
     }
 
     public void Restart_6()
     {
         RestartScene("Level6");
+        Continue();
     }
 
     private void RestartScene(string sceneName)
