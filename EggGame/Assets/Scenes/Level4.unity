@@ -764,10 +764,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -2.519432, y: 6.848507}
+    - - {x: -2.5793087, y: 6.827696}
       - {x: -6.757118, y: -0.71718043}
       - {x: 2.2401223, y: -0.5073}
-      - {x: -2.5327148, y: 7.116829}
+      - {x: -2.465888, y: 7.0620832}
 --- !u!1 &659949412
 GameObject:
   m_ObjectHideFlags: 0
@@ -1096,7 +1096,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 898505587}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.31, y: 2.24, z: 0}
+  m_LocalPosition: {x: -0.31, y: 2.216, z: 0}
   m_LocalScale: {x: 2.0453346, y: 2.0453346, z: 3.4088905}
   m_ConstrainProportionsScale: 0
   m_Children: []
