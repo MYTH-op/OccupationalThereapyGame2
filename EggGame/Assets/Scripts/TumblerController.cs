@@ -4,8 +4,10 @@ using System.Collections.Generic;
 public class TumblerController : MonoBehaviour
 {
     public float fallSpeed = 1.0f;
-    public float gravityScale = 1.0f; // You can modify this in the Unity Inspector
-    public float delayBeforeFalling = 1.0f; // You can modify this in the Unity Inspector
+    public float gravityScale = 1.0f; 
+    public float delayBeforeFalling = 1.0f; 
+    public Bar barScript; 
+
     private Rigidbody2D rb;
     private Vector2 initialPosition;
     private List<TransformData> fallPath = new List<TransformData>();
@@ -16,8 +18,6 @@ public class TumblerController : MonoBehaviour
     private bool isReplayingPath = false;
     private bool isDelayActive = false;
     private Vector2 initialMovementDirection;
-
-    // Create a class to store position and rotation data
     [System.Serializable]
     public class TransformData
     {
@@ -50,7 +50,6 @@ public class TumblerController : MonoBehaviour
             {
                 if (replayIndex >= 0)
                 {
-                    // Retrace position and rotation
                     TransformData data = fallPath[replayIndex];
                     transform.position = data.position;
                     transform.rotation = data.rotation;
@@ -64,7 +63,6 @@ public class TumblerController : MonoBehaviour
             }
             else if (!isDelayActive)
             {
-                // Record position and rotation data
                 fallPath.Add(new TransformData
                 {
                     position = transform.position,
@@ -81,8 +79,6 @@ public class TumblerController : MonoBehaviour
         isFallingRight = randomXForce > 0;
         isFallingLeft = randomXForce < 0;
         isFalling = true;
-
-        // Store the initial movement direction
         initialMovementDirection = rb.velocity.normalized;
     }
 
@@ -106,19 +102,17 @@ public class TumblerController : MonoBehaviour
     {
         rb.velocity = Vector2.zero;
         rb.angularVelocity = 0f;
-
-        // Reset the position to the initial position
         transform.position = initialPosition;
-
-        // Reset the rotation to zero
         transform.rotation = Quaternion.Euler(0f, 0f, 0f);
-
-        // Clear the fall path
         fallPath.Clear();
-
-        // Reapply the initial movement direction in reverse
         FallingRandomDirection();
 
         isFalling = true;
+    }
+
+    public void StopTumblerMovement()
+    {
+        rb.velocity = Vector2.zero;
+        isFalling = false;
     }
 }

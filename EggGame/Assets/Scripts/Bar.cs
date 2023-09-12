@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Bar : MonoBehaviour
 {
+    public TumblerController tumbler;
+    public GameObject LevelSuccess;
     public GameObject bar;
     [SerializeField] float time;
     private float fillStartTime;
@@ -21,5 +23,10 @@ public class Bar : MonoBehaviour
         float progress = (Time.time - fillStartTime) / time;
         progress = Mathf.Clamp01(progress);
         bar.transform.localScale = new Vector3(progress, bar.transform.localScale.y, bar.transform.localScale.z);
+        if (progress >= 1.0f)
+        {
+            tumbler.StopTumblerMovement();
+            LevelSuccess.SetActive(true);
+        }
     }
 }
