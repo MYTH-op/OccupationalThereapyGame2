@@ -6,7 +6,7 @@ public class TumblerController : MonoBehaviour
     public float fallSpeed = 1.0f;
     public float gravityScale = 1.0f; 
     public float delayBeforeFalling = 1.0f; 
-    public Bar barScript; 
+    public Bar bar; 
 
     private Rigidbody2D rb;
     private Vector2 initialPosition;
@@ -48,8 +48,9 @@ public class TumblerController : MonoBehaviour
             }
             if (isReplayingPath)
             {
-                if (replayIndex >= 0)
+                if (replayIndex >= 0 && replayIndex < fallPath.Count)
                 {
+                    // Retrace position and rotation
                     TransformData data = fallPath[replayIndex];
                     transform.position = data.position;
                     transform.rotation = data.rotation;
