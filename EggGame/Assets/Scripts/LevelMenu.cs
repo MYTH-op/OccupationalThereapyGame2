@@ -8,7 +8,6 @@ public class LevelMenu : MonoBehaviour
 
     public void Lvl1()
     {
-
         SceneManager.LoadScene("Level1");
         Debug.Log("sceneswitch");
     }
