@@ -349,7 +349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameOver: {fileID: 491697328}
-  bar: {fileID: 0}
+  bar: {fileID: 334683611}
 --- !u!1 &491697328
 GameObject:
   m_ObjectHideFlags: 0
@@ -999,6 +999,7 @@ GameObject:
   m_Component:
   - component: {fileID: 839113024}
   - component: {fileID: 839113023}
+  - component: {fileID: 839113025}
   m_Layer: 0
   m_Name: newMorning
   m_TagString: Untagged
@@ -1073,6 +1074,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &839113025
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839113022}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 152.3189, y: 86.2}
+    newSize: {x: 152.3189, y: 86.2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -5.4177933, y: 2.1568756}
+      - {x: -7.3997736, y: -2.0078092}
+      - {x: 2.9517822, y: -1.9971695}
+      - {x: -2.5386186, y: 6.772884}
 --- !u!1 &898505587
 GameObject:
   m_ObjectHideFlags: 0
@@ -2187,7 +2217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameOver: {fileID: 491697328}
-  bar: {fileID: 0}
+  bar: {fileID: 334683611}
 --- !u!1 &1458586908
 GameObject:
   m_ObjectHideFlags: 0

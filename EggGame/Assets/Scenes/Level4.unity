@@ -2795,6 +2795,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2030805331}
   - component: {fileID: 2030805330}
+  - component: {fileID: 2030805332}
   m_Layer: 0
   m_Name: newAfternoon
   m_TagString: Untagged
@@ -2869,3 +2870,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &2030805332
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030805329}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 152.33658, y: 86.21001}
+    newSize: {x: 152.33658, y: 86.21001}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -4.35981, y: 3.5392303}
+      - {x: -7.024292, y: -1.4746284}
+      - {x: 2.5719147, y: -1.5889435}
+      - {x: -2.451345, y: 6.9733477}
