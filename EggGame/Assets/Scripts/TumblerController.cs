@@ -6,8 +6,9 @@ public class TumblerController : MonoBehaviour
     public float fallSpeed = 1.0f;
     public float gravityScale = 1.0f; 
     public float delayBeforeFalling = 1.0f; 
-    public Bar bar; 
-
+    public Bar bar;
+    public GameObject Right;
+    public GameObject Left;
     private Rigidbody2D rb;
     private Vector2 initialPosition;
     private List<TransformData> fallPath = new List<TransformData>();
@@ -37,6 +38,23 @@ public class TumblerController : MonoBehaviour
     {
         if (isFalling)
         {
+            if(isFallingLeft)
+            {
+                Left.SetActive(true);
+            }
+            else
+            {
+                Left.SetActive(false);
+            } 
+            
+            if(isFallingRight)
+            {
+                Right.SetActive(true);
+            }
+            else
+            {
+                Right.SetActive(false);
+            }
             if (!isReplayingPath && Input.GetMouseButtonDown(0))
             {
                 Vector3 clickPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -86,6 +104,7 @@ public class TumblerController : MonoBehaviour
     void StartReplayingPath()
     {
         isReplayingPath = true;
+        
         replayIndex = fallPath.Count - 2;
     }
 
@@ -115,5 +134,8 @@ public class TumblerController : MonoBehaviour
     {
         rb.velocity = Vector2.zero;
         isFalling = false;
+        isFallingRight = false;
+        isFallingLeft = false;
     }
+    
 }

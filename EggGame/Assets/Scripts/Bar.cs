@@ -6,6 +6,7 @@ public class Bar : MonoBehaviour
     public TumblerController tumbler;
     public GameObject LevelSuccess;
     public GameObject bar;
+    public GameObject Canvas;
     [SerializeField] float time;
     private float fillStartTime;
     private Vector3 initialScale;
@@ -29,6 +30,7 @@ public class Bar : MonoBehaviour
             {
                 tumbler.StopTumblerMovement();
                 LevelSuccess.SetActive(true);
+                Canvas.SetActive(false);
             }
         }
     }
