@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class Bar : MonoBehaviour
+public class Tumbler_Bar : MonoBehaviour
 {
     public TumblerController tumbler;
     public GameObject LevelSuccess;

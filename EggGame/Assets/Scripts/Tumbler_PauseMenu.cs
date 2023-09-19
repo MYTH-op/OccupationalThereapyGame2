@@ -1,10 +1,10 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PauseMenu : MonoBehaviour
+public class Tumbler_PauseMenu : MonoBehaviour
 {
     public GameObject PausePanel;
-    public Bar bar;
+    public Tumbler_Bar bar;
 
     private bool isRestarting = false;
 

@@ -1,10 +1,10 @@
 using UnityEngine;
 
-public class Demolition : MonoBehaviour
+public class Tumbler_Demolition : MonoBehaviour
 {
     public GameObject GameOver;
     public GameObject Canvas;
-    public Bar bar;
+    public Tumbler_Bar bar;
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Tumbler"))

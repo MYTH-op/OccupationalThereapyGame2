@@ -6,7 +6,7 @@ public class TumblerController : MonoBehaviour
     public float fallSpeed = 1.0f;
     public float gravityScale = 1.0f; 
     public float delayBeforeFalling = 1.0f; 
-    public Bar bar;
+    public Tumbler_Bar bar;
     public GameObject Right;
     public GameObject Left;
     private Rigidbody2D rb;
@@ -133,6 +133,7 @@ public class TumblerController : MonoBehaviour
     public void StopTumblerMovement()
     {
         rb.velocity = Vector2.zero;
+        transform.position = initialPosition;
         isFalling = false;
         isFallingRight = false;
         isFallingLeft = false;

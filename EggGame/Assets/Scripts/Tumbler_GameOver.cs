@@ -1,11 +1,11 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class GameOver : MonoBehaviour
+public class Tumbler_GameOver : MonoBehaviour
 {
-    [SerializeField] string levelNum = "Level1";
+    [SerializeField] string levelNum = "Level_Tumbler_1";
     public void LevelSelect()
     {
-        SceneManager.LoadScene("LevelChoosing"); 
+        SceneManager.LoadScene("Tumbler_LevelChoosing"); 
     }
 
     public void Restart()

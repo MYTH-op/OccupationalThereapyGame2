@@ -9,30 +9,36 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 0
-    path: Assets/Scenes/MainScene.unity
+    path: Assets/Scenes/Tumbler_MainScene.unity
     guid: 6d923024deed0d743b13c57a5bb548d1
   - enabled: 1
-    path: Assets/Scenes/LevelChoosing.unity
+    path: Assets/Scenes/Tumbler_LevelChoosing.unity
     guid: 9a5b5357086c7c94d9832fc16c9ac28d
   - enabled: 1
-    path: Assets/Scenes/Level1.unity
+    path: Assets/Scenes/Level_Tumbler_1.unity
     guid: 5198d1c7024b3fb498e8fa12cc774055
   - enabled: 1
-    path: Assets/Scenes/Level2.unity
+    path: Assets/Scenes/Level_Tumbler_2.unity
     guid: 41ccd95df443d5448bea9cfd95a08dff
   - enabled: 1
-    path: Assets/Scenes/Level2.unity
-    guid: 093c9ac3257453147ac9519069e234f1
-  - enabled: 1
-    path: Assets/Scenes/Level3.unity
+    path: Assets/Scenes/Level_Tumbler_3.unity
     guid: d596e229d184ef04091a5c4197b49043
   - enabled: 1
+    path: Assets/Scenes/Level_Tumbler_4.unity
+    guid: df96f78c14d03a745add22e696aab6c7
+  - enabled: 1
+    path: Assets/Scenes/Level_Tumbler_5.unity
+    guid: 2da954ac780d5174aa4946d250abd1a8
+  - enabled: 1
+    path: Assets/Scenes/Level_Tumbler_6.unity
+    guid: e562d0d1eaa911945b2b21c8ee173f10
+  - enabled: 0
+    path: Assets/Scenes/Level2.unity
+    guid: 093c9ac3257453147ac9519069e234f1
+  - enabled: 0
     path: Assets/Scenes/Level4.unity
     guid: 46e3061ef52387147a61da54d72b79b8
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level5.unity
     guid: fb9b915f3e8d1d346b9e4f860484991c
-  - enabled: 1
-    path: Assets/Scenes/Level6.unity
-    guid: e562d0d1eaa911945b2b21c8ee173f10
   m_configObjects: {}
