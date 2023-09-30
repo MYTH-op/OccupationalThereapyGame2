@@ -10,6 +10,6 @@ public class Tumbler_GameOver : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene(levelNum);
+        SceneManager.LoadScene(levelNum);       
     }
 }

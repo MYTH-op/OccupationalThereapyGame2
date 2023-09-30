@@ -35,43 +35,43 @@ public class Tumbler_PauseMenu : MonoBehaviour
     public void MainMenu()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("LevelChoosing");
+        SceneManager.LoadScene("Tumbler_LevelChoosing");
         
     }
 
     public void Restart_1()
     {
-        RestartScene("Level1");
+        RestartScene("Level_Tumbler_1");
         Continue();
     }
 
     public void Restart_2()
     {
-        RestartScene("Level2");
+        RestartScene("Level_Tumbler_2");
         Continue();
     }
 
     public void Restart_3()
     {
-        RestartScene("Level3");
+        RestartScene("Level_Tumbler_3");
         Continue();
     }
 
     public void Restart_4()
     {
-        RestartScene("Level4");
+        RestartScene("Level_Tumbler_4");
         Continue();
     }
 
     public void Restart_5()
     {
-        RestartScene("Level5");
+        RestartScene("Level_Tumbler_5");
         Continue();
     }
 
     public void Restart_6()
     {
-        RestartScene("Level6");
+        RestartScene("Level_Tumbler_6");
         Continue();
     }
 
